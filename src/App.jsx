@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import { Child1 } from "./components/Child1";
 import { Child4 } from "./components/Child4";
 
-export const App = () => {
+export const App = memo(() => {
     console.log("App refactoring");
     const [num, setNum] = useState(0);
     const onClickButton = () => {
@@ -17,4 +17,4 @@ export const App = () => {
             <Child4 />
         </>
     );
-};
+});
